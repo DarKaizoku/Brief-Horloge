@@ -11,14 +11,12 @@ let heure = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 
 //Stocker l'heure , minute , seconde  dans des variables
 
-
-
+//Stocker l'heure , minute , seconde  dans des varaiables
 
 // Calculer de degré de mouvement de l'aiguille heure, de l'aiguille minute, de l'aiguille seconde
 // Hint : Tous les aiguilles doivent se déplacer chaque second selon un degré
 
-
-// Déplacer les aiguilles 
+// Déplacer les aiguilles
 function demarrerLaMontre() {
     let date = new Date();
     const hours = ((date.getHours() + 11) % 12 + 1 );
@@ -37,3 +35,19 @@ var interval = setInterval(demarrerLaMontre, 1000);
 document.querySelector("#hour").style.transform = `rotate(${hour}deg)`;
 document.querySelector("#minute").style.transform = `rotate(${minute}deg)`;
 document.querySelector("#second").style.transform = `rotate(${second}deg)`;
+    let direct = new Date();
+      let sec = direct.getSeconds();
+      let min = direct.getMinutes();
+      let hour = direct.getHours();
+      console.log(direct);
+    };
+
+var interval = setInterval(demarrerLaMontre, 1000);
+
+
+
+
+// Exercuter la fonction chaque second
+
+
+//recursivité
