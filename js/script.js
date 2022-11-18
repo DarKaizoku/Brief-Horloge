@@ -14,6 +14,8 @@ const AIGUILLESEC = document.querySelector("#second");
 
 // Déplacer les aiguilles
 
+demarrerLaMontre();
+
 function demarrerLaMontre() {
   let date = new Date();
   const hours = ((date.getHours() + 11) % 12) + 1;
@@ -30,5 +32,3 @@ function demarrerLaMontre() {
 // Exercuter la fonction chaque second
 
 var interval = setInterval(demarrerLaMontre, 1000);
-
-
