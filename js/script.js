@@ -5,11 +5,12 @@ const AIGUILLESEC = document.querySelector("#second");
 
 //Extraire l'heure actuel à l'aide de l'objet Date()
 
-let d = new Date();
-let hour = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-console.log(hour);
+let date = new Date();
 
-//Stocker l'heure , minute , seconde  dans des varaiables
+let heure = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+
+//Stocker l'heure , minute , seconde  dans des variables
+
 
 
 
@@ -19,11 +20,20 @@ console.log(hour);
 
 // Déplacer les aiguilles 
 function demarrerLaMontre() {
-
-
+    let date = new Date();
+    const hours = ((date.getHours() + 11) % 12 + 1 );
+    const minutes = date.getMinutes();
+    const seconds= date.getSeconds();
+    const hourDeg = hours * 30 ;       //360/12
+    const minuteDeg = minutes * 6; /* 360degrés / 60 minutes = 6 */
+    const secondDeg = seconds * 6;
+    console.log(date, hours, minutes, seconds,hourDeg,minuteDeg,secondDeg);
 
 }
 // Exercuter la fonction chaque second
 var interval = setInterval(demarrerLaMontre, 1000);
 
 //recursivité
+document.querySelector("#hour").style.transform = `rotate(${hour}deg)`;
+document.querySelector("#minute").style.transform = `rotate(${minute}deg)`;
+document.querySelector("#second").style.transform = `rotate(${second}deg)`;
