@@ -5,6 +5,9 @@ const AIGUILLESEC = document.querySelector("#second");
 
 //Extraire l'heure actuel à l'aide de l'objet Date()
 
+let d = new Date();
+let hour = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+console.log(hour);
 
 //Stocker l'heure , minute , seconde  dans des varaiables
 
@@ -22,3 +25,5 @@ function demarrerLaMontre() {
 }
 // Exercuter la fonction chaque second
 var interval = setInterval(demarrerLaMontre, 1000);
+
+//recursivité
