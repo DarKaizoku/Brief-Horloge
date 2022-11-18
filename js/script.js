@@ -11,7 +11,15 @@ console.log(hour);
 
 //Stocker l'heure , minute , seconde  dans des varaiables
 
+hourT();
 
+function hourT () {
+let d = new Date();
+let hour = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+console.log(hour);
+}
+
+let interval = setInterval (hourT, 1000);
 
 // Calculer de degré de mouvement de l'aiguille heure, de l'aiguille minute, de l'aiguille seconde
 // Hint : Tous les aiguilles doivent se déplacer chaque second selon un degré
@@ -24,6 +32,6 @@ function demarrerLaMontre() {
 
 }
 // Exercuter la fonction chaque second
-var interval = setInterval(demarrerLaMontre, 1000);
+//var interval = setInterval(demarrerLaMontre, 1000);
 
 //recursivité
