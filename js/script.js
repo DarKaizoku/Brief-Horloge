@@ -11,6 +11,7 @@ const AIGUILLESEC = document.querySelector("#second");
 // Hint : Tous les aiguilles doivent se déplacer chaque second selon un degré
 
 // Déplacer les aiguilles
+
 function demarrerLaMontre() {
     let direct = new Date();
       let sec = direct.getSeconds();
