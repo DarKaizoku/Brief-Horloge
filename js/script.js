@@ -21,7 +21,7 @@ function demarrerLaMontre() {
   const hours = ((date.getHours() + 11) % 12) + 1;
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
-  const hourDeg = hours * 30; //360/12
+  const hourDeg = hours * 30 + minutes/2; //360/12
   const minuteDeg = minutes * 6; /* 360degrés / 60 minutes = 6 */
   const secondDeg = seconds * 6;
   console.log(date, hours, minutes, seconds, hourDeg, minuteDeg, secondDeg);
