@@ -31,5 +31,4 @@ function demarrerLaMontre() {
 
 var interval = setInterval(demarrerLaMontre, 1000);
 
-// Exercuter la fonction chaque second
 
