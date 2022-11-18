@@ -5,9 +5,6 @@ const AIGUILLESEC = document.querySelector("#second");
 
 //Extraire l'heure actuel à l'aide de l'objet Date()
 
-let date = new Date();
-
-let heure = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 
 //Stocker l'heure , minute , seconde  dans des variables
 
@@ -26,21 +23,17 @@ function demarrerLaMontre() {
     const minuteDeg = minutes * 6; /* 360degrés / 60 minutes = 6 */
     const secondDeg = seconds * 6;
     console.log(date, hours, minutes, seconds,hourDeg,minuteDeg,secondDeg);
+    document.querySelector("#hour").style.transform = `rotate(${hourDeg}deg)`;
+    document.querySelector("#minute").style.transform = `rotate(${minuteDeg}deg)`;
+    document.querySelector("#second").style.transform = `rotate(${secondDeg}deg)`;
 
 }
 // Exercuter la fonction chaque second
 var interval = setInterval(demarrerLaMontre, 1000);
 
 //recursivité
-document.querySelector("#hour").style.transform = `rotate(${hour}deg)`;
-document.querySelector("#minute").style.transform = `rotate(${minute}deg)`;
-document.querySelector("#second").style.transform = `rotate(${second}deg)`;
-    let direct = new Date();
-      let sec = direct.getSeconds();
-      let min = direct.getMinutes();
-      let hour = direct.getHours();
-      console.log(direct);
-    };
+
+
 
 var interval = setInterval(demarrerLaMontre, 1000);
 
